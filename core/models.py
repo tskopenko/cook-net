@@ -24,7 +24,7 @@ class Cook(AbstractUser):
 
 class Dish(models.Model):
     name = models.CharField(max_length=255)
-    dish_type = models.ForeignKey(DishType, on_delete=models.CASCADE)
+    type = models.ForeignKey(DishType, on_delete=models.CASCADE)
     cooks = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="dishes")
 
     class Meta:
