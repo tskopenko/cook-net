@@ -11,7 +11,11 @@ from core.views import (
     DishCreateView,
     DishUpdateView,
     DishDeleteView,
-    toggle_assign_to_dish, CookListView, CookDetailView, CookCreateView, CookDeleteView,
+    toggle_assign_to_dish,
+    CookListView,
+    CookDetailView,
+    CookCreateView,
+    CookDeleteView,
 )
 
 app_name = "core"
