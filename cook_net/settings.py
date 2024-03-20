@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -87,6 +88,10 @@ DATABASES = {
     }
 }
 
+
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES["default"].update(db_from_env)
+DATABASE_URL = "postgres://hjkjgmuo:ctCaM6xH1UDMcLWhpeYJub8CSywZjFzS@snuffleupagus.db.elephantsql.com/hjkjgmuo"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
