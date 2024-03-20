@@ -21,6 +21,13 @@ Welcome to the COOK-NET application! This Django-based project is designed to im
 5. **Discover Cooking Tips:** Explore cooking tips and tricks to enhance your culinary skills.
 6. **Customize Your Profile:** Personalize your profile to showcase your cooking journey.
 
+## Testing User
+
+You can log in with the following credentials for a testing user:
+
+- **Username:** user
+- **Password:** geQaLkmmnQMs
+
 ## Technologies Used
 
 - Django
