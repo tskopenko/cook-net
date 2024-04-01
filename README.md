@@ -39,12 +39,47 @@ You can log in with the following credentials for a testing user:
 
 To run this project locally, follow these steps:
 
-1. Clone this repository to your local machine.
-2. Install the required dependencies listed in the `requirements.txt` file.
-3. Set up your PostgreSQL database and update the database configurations in the `settings.py` file.
-4. Run migrations to apply database changes.
-5. Start the Django development server.
-6. Access the application through your browser at `http://localhost:8000`.
+
+Clone this repository to your local machine
+
+```bash
+git clone https://github.com/tskopenko/COOK-NET.git
+```
+
+Navigate to the project directory
+
+```bash
+cd COOK-NET
+```
+
+Create and activate a virtual environment (optional but recommended)
+
+```bash
+python3 -m venv venv
+source venv/bin/activate  # For Linux/Mac
+venv\Scripts\activate  # For Windows
+```
+
+Install the required dependencies
+```bash
+pip install -r requirements.txt
+```
+
+
+Set up your PostgreSQL database and update the database configurations in settings.py
+Create a PostgreSQL database named 'cook_net' with your preferred settings
+
+Apply database migrations
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+Start the Django development server
+```bash
+python manage.py runserver
+```
+Access the application through your browser at http://localhost:8000
 
 ## Deployment
 

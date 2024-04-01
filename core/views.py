@@ -99,9 +99,7 @@ class CookDeleteView(LoginRequiredMixin, generic.DeleteView):
 @login_required
 def toggle_assign_to_dish(request, pk):
     cook = Cook.objects.get(id=request.user.id)
-    if (
-            Dish.objects.get_or_404(id=pk) in cook.dishes.all()
-    ):
+    if request.user.dishes.filter(pk=pk).exists:
         cook.dishes.remove(pk)
     else:
         cook.dishes.add(pk)
