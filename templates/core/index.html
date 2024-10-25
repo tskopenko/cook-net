@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Le Tcanini Home</h1>
+  <p>Welcome to Best Restaurant Ever!</p>
+  <h2>Dynamic content</h2>
+  <p>Are currently at Le Tcanini::</p>
+  <ul>
+    <li><strong>Dishes:</strong> {{ num_dishes }}</li>
+    <li><strong>Cooks:</strong> {{ num_cooks }}</li>
+    <li><strong>Types of Dishes:</strong> {{ num_dish_types }}</li>
+  </ul>
+
+{% endblock %}
